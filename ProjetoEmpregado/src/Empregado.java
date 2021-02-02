@@ -1,17 +1,15 @@
 
-public class Employee {
-	
+public class Empregado {
+
 	String nome;
 	String cargo;
 	double salario;
-	
-	void imprimirInfo() {
+
+	void imprimirInfo(){
 		System.out.println("Funcionario: "+nome+ "("+cargo+") R$ "+salario);
-	
 	}
-	
-	void aumentarSalario(double percentual) {
+
+	void aumentarSalario(double percentual){
 		salario = salario + salario * percentual / 100;
 	}
-		
 }
