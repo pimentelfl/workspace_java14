@@ -6,26 +6,56 @@ public class ContaBancaria {
 	private String 	nomeTitular;
 	private double 	saldo;
 	
-	void modificarNumeroConta(int novoNumero) {
-		if (novoNumero <= 0) {
-			// Erro
-		}
-		numeroConta = novoNumero;
-	}
-	
-	int consultarNumeroConta( ) {
+	public int getNumeroConta() {
 		return numeroConta;
 	}
-	
-	String exibirInfo() {
+
+	public void setNumeroConta(int numeroConta) {
+		this.numeroConta = numeroConta;
+	}
+
+	public int getDigitoVerif() {
+		return digitoVerif;
+	}
+
+	public void setDigitoVerif(int digitoVerif) {
+		this.digitoVerif = digitoVerif;
+	}
+
+	public String getCpfTitular() {
+		return cpfTitular;
+	}
+
+	public void setCpfTitular(String cpfTitular) {
+		this.cpfTitular = cpfTitular;
+	}
+
+	public String getNomeTitular() {
+		return nomeTitular;
+	}
+
+	public void setNomeTitular(String nomeTitular) {
+		this.nomeTitular = nomeTitular;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public String exibirInfo() {
 		return numeroConta+"-"+digitoVerif+" : "+nomeTitular+" ("+cpfTitular+") "+saldo;
 		
 	}
 	
-	void creditar(double valor) {
+	public void creditar(double valor) {
 		saldo += valor;
 	}
-	boolean debitar(double valor) {
+	
+	public boolean debitar(double valor) {
 		if(valor <= saldo) {
 			saldo -= valor;
 			return true;

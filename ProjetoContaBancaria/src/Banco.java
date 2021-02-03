@@ -8,11 +8,11 @@ public class Banco {
 		int opcao;
 		double valor;
 	
-		c1.modificarNumeroConta(12345);
-		c1.digitoVerif = 6;
-		c1.cpfTitular = "123.456.789-00";
-		c1.nomeTitular = "Fabio LP";
-		c1.saldo = 0.0;
+		c1.setNumeroConta(12345);
+		c1.setDigitoVerif(6);
+		c1.setCpfTitular("123.456.789-00");
+		c1.setNomeTitular("Fabio LP");
+		c1.setSaldo(0.0);
 		
 		do {
 			System.out.println("Banco FPItau - Feito para voce");
@@ -46,5 +46,6 @@ public class Banco {
 			}
 		
 		} while (opcao != 0);
+		teclado.close();
 	}	
 }
